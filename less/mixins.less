@@ -1,1 +1,23 @@
 // Mixins in here
+
+.center-parametric(@color, @height, @width, @font-color) {
+    border-radius: 15px;
+    background-color: @color;
+    height: @height;
+    width: @width;
+    color: @font-color;
+    text-align: center;
+    line-height: 25px;
+    font-size: 15px;
+  }
+
+  .btn {
+      .center-parametric(@eastern-blue, 30px, 200px, @white);
+      
+      @mobile {
+          width: 95%
+          display: flex;
+          border: 1px solid red;
+      }
+      
+  }
