@@ -8,6 +8,11 @@
   line-height: 25px;
   font-size: 15px;
 }
+@mobile {
+  width: 95%
+          display: flex;
+  border: 1px solid red;
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -178,6 +183,38 @@ img {
   width: 100%;
   margin: 0 auto;
 }
+@media (max-width: 500px) {
+  .container header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+  }
+  .container .content-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .container .content-section .text-content {
+    width: 100% !important;
+  }
+  .container .content-section .img-content {
+    width: 100% !important;
+  }
+  .container .content-section .inverse-content {
+    border: 2px solid green;
+  }
+  .container .content-section .inverse-content .text-content {
+    order: -1;
+  }
+  .container .content-pick {
+    display: flex;
+    flex-direction: column;
+  }
+  .container .content-pick .destination {
+    width: 100% !important;
+  }
+}
 header {
   display: flex;
   justify-content: space-between;
@@ -186,6 +223,7 @@ header {
 }
 nav a {
   margin-right: 50px;
+  text-decoration: none;
 }
 .footer {
   width: 100%;
@@ -244,7 +282,16 @@ nav a {
   width: 30%;
   margin-bottom: 30px;
 }
+@mobile {
+  width: 100%
+      display: flex;
+  flex-wrap: wrap;
+}
 .top-content {
   padding-top: 20px;
   border-bottom: 1px dashed black;
+}
+@mobile {
+  display: flex;
+  flex-direction: column;
 }

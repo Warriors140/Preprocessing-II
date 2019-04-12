@@ -44,8 +44,47 @@ img {
   width: 100%;
   margin: 0 auto;
 
-  @moblie {
+  @media @mobile {
+    header {
+    width: 100%;
     display: flex;
     flex-direction: column;
+    padding-bottom: 20px;
+    }
+
+    .content-section {
+      // border: 1px solid blue;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    
+     .text-content{
+      //  border: 1px solid green;
+       width: 100% !important;
+      }
+      
+      .img-content {
+        width: 100% !important;
+        
+      }
+
+      .inverse-content{
+         border:2px solid green;
+      .text-content{
+        order:-1;
+      }
+      }
+    }
+
+    .content-pick {
+      display: flex;
+      flex-direction: column;
+      // border: 1px solid blue;
+
+      .destination {
+        width: 100% !important;
+      }
+    }
+
   }
 }
